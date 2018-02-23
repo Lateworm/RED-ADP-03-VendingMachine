@@ -1,7 +1,7 @@
 const VendingMachine = require('../lib/machine.js');
 const productInventory = require('../__mocks__/stateInventoryFull');
 const coinInventory = require('../__mocks__/stateCoinFull');
-const payment = require('../__mocks__/stateCoinTwoFiddy');
+const payment = require('../__mocks__/stateCoinEmpty');
 
 const machine = new VendingMachine(productInventory, coinInventory, payment);
 
