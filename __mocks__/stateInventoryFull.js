@@ -17,7 +17,7 @@ module.exports = {
   slot04: {
     name: 'Cheeziez',
     stock: 12,
-    price: 2.25,
+    price: 2.5,
   },
   slot05: {
     name: 'Vegan Gluten-Free Low-Carb Bullshit',
