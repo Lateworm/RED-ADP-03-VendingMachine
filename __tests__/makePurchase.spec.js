@@ -1,9 +1,14 @@
-const machine = require('../lib/machine.js');
+const VendingMachine = require('../lib/machine.js');
+const productInventory = require('../__mocks__/stateInventoryFull');
+const coinInventory = require('../__mocks__/stateCoinFull');
+const payment = require('../__mocks__/stateCoinTwoFiddy');
+
+const machine = new VendingMachine(productInventory, coinInventory, payment);
 
 describe('make a purchase', () => {
-  describe('when given the desired item and sufficient payment', () => {
+  describe('when given an item and sufficient payment', () => {
     test('should return a receipt for the transaction', () => {
-      expect(machine.makePurchase('itemSlot', 'payment')).toEqual(['itemSlot', 'payment']);
+      expect(machine.makePurchase('slot03')).toEqual(-0.25);
     });
   });
 });
