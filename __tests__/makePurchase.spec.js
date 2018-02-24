@@ -11,4 +11,6 @@ describe('make a purchase', () => {
       expect(machine.makePurchase('slot03')).toEqual(-0.25);
     });
   });
+
+  // TODO: Test that after the purchase is complete, the current payment is reset
 });
